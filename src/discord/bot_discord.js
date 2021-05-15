@@ -25,7 +25,9 @@ const start_DiscordServer = prefix => {
                 message.reply('#DogeToTheMoon 🚀');
             break;
             case 'play':
-                youtubeSearch(content).then(ytRes => playSong(message.member.voice.channel, message.channel, ytRes.first));
+                youtubeSearch(content)
+                    .then(ytRes => playSong(message.member.voice.channel, message.channel, ytRes.first))
+                    .catch(() => message.reply('ocurrió un error :('));
             break;
             default:
                 message.reply(`el comando '${command}' no existe.`);

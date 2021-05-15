@@ -18,7 +18,7 @@ const start_TwitchServer = prefix => {
 
         switch(command){
             case 'dogecoin':
-                client.say(target, 'Doge to the moon 🚀');
+                client.say(target, '#DogeToTheMoon 🚀');
             break;
             case 'play':
                 playSong_fromTwitch(content)
