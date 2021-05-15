@@ -9,7 +9,7 @@ const client = new tmi.client({
 const start_TwitchServer = prefix => {
     client.connect();
 
-    client.on('connected', (addr, port) => console.log(`✔️ Conectado a ${addr}:${port}`));
+    client.on('connected', () => console.log(`✔️ Bot de Twitch iniciado correctamente.`));
 
     client.on('message', async (target, context, msg, self) => {
         if(self || msg.charAt(0) !== prefix) return;
